@@ -11,7 +11,7 @@ const Footer = () => {
             <a href="#products">Produits</a>
             <a href="#contact">Contact</a>
           </div>
-          <p className="copyright">© 2024 FDL Chemicals. Tous droits réservés.</p>
+          <p className="copyright">© 2026 FDL Chemicals. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
