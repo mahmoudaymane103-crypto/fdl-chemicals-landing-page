@@ -33,8 +33,8 @@ app.use(compression({
   level: parseInt(process.env.COMPRESSION_LEVEL) || 6
 }));
 
-// Static files middleware
-app.use(express.static(path.join(__dirname, 'public')));
+// Static files middleware - serve React build files
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // JSON parsing middleware
 app.use(express.json({ limit: '10mb' }));
@@ -77,7 +77,7 @@ app.post('/api/contact', (req, res) => {
 
 // Serve index.html for all non-API routes (SPA fallback)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 // Error handling middleware
